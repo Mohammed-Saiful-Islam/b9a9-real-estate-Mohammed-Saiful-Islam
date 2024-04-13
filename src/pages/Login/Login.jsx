@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../Shared/Navbar/Navbar';
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
     const {signIn}=useContext(AuthContext);
@@ -30,6 +31,11 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    Residential | Login
+                </title>
+            </Helmet>
             <Navbar></Navbar>
             <h2 className="text-3xl text-center my-10">Please Login</h2>
             <form onSubmit={handleLogin} className="card-body md:w-3/4 lg:w-1/2 mx-auto">

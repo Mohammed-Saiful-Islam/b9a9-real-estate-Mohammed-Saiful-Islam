@@ -5,6 +5,7 @@ import Navbar from "../Shared/Navbar/Navbar";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
 import BreakingNews from "./BreakingNews";
 import NewsCard from "./NewsCard";
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
@@ -12,6 +13,11 @@ const Home = () => {
     console.log(news)
     return (
         <div>
+            <Helmet>
+                <title>
+                    Residential | Home
+                </title>
+            </Helmet>
             <Header></Header>
             <BreakingNews></BreakingNews>
             <Navbar></Navbar>

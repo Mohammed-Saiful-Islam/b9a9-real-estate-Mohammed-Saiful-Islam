@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
@@ -28,6 +29,11 @@ const Register = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    Residential | Register
+                </title>
+            </Helmet>
             <Navbar></Navbar>
             <h2 className="text-3xl text-center my-10">Please Register</h2>
             <form onSubmit={handleRegister} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
