@@ -1,9 +1,9 @@
-import React from 'react';
-import logo from '../../assets/logo1.svg';
+
+// import logo from '../../assets/logo1.svg';
 
 const Slider = () => {
     return (
-        <div>
+        <div className='mt-2'>
        
             <div className="carousel w-full h-96">
            
@@ -21,7 +21,7 @@ const Slider = () => {
     <img src="https://img.freepik.com/free-photo/cheerful-family-playing-with-blindfold-laughing-home_23-2148208033.jpg?t=st=1712991074~exp=1712994674~hmac=916ffafc2a9a16406db1e42b16ff5ea6f3b305061adddb6501d63d62dec8b3cd&w=996" className="w-full" />
   </div>
 </div> 
-<img src={logo} alt=""  className='w-full'/>
+{/* <img src={logo} alt=""  className='w-full'/> */}
 <div className="flex justify-center w-full py-2 gap-2">
   <a href="#item1" className="btn btn-xs">1</a> 
   <a href="#item2" className="btn btn-xs">2</a> 

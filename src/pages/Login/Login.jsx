@@ -3,6 +3,9 @@ import Navbar from '../Shared/Navbar/Navbar';
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { Helmet } from 'react-helmet-async';
+import Header from '../Shared/Header/Header';
+import Footer from '../Shared/Footer/Footer';
+
 
 const Login = () => {
     const {signIn}=useContext(AuthContext);
@@ -36,6 +39,7 @@ const Login = () => {
                     Residential | Login
                 </title>
             </Helmet>
+            <Header></Header>
             <Navbar></Navbar>
             <h2 className="text-3xl text-center my-10">Please Login</h2>
             <form onSubmit={handleLogin} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
@@ -59,6 +63,8 @@ const Login = () => {
                             </div>
                         </form>
                         <p className='text-center mt-4'>Do not have an account?<Link className='text-blue-600 font-bold' to="/register">Register</Link></p>
+                        
+        <Footer></Footer>
         </div>
     );
 };

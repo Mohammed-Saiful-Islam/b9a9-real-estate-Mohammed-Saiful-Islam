@@ -1,12 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import Header from "../Shared/Header/Header";
-import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
+// import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
 import Navbar from "../Shared/Navbar/Navbar";
-import RightSideNav from "../Shared/RightSideNav/RightSideNav";
+// import RightSideNav from "../Shared/RightSideNav/RightSideNav";
 // import BreakingNews from "./BreakingNews";
 import NewsCard from "./NewsCard";
 import { Helmet } from "react-helmet-async";
 import Slider from "./Slider";
+import Footer from "../Shared/Footer/Footer";
 
 
 const Home = () => {
@@ -20,23 +21,24 @@ const Home = () => {
                 </title>
             </Helmet>
             <Header></Header>
+            <Navbar></Navbar>
             <Slider></Slider>
             {/* <BreakingNews></BreakingNews> */}
-            <Navbar></Navbar>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div className="border">
+            <div className="">
+                {/* <div className="border">
                     <LeftSideNav></LeftSideNav>
-                </div>
+                </div> */}
                 {/* news container */}
-                <div className="md:col-span-2 border">
+                <div className="">
                    {
                     news.map(aNews=><NewsCard key={aNews._id} news={aNews}></NewsCard>)
                    }
                 </div>
-                <div className="border">
+                {/* <div className="border">
                     <RightSideNav></RightSideNav>
-                </div>
+                </div> */}
             </div>
+            <Footer></Footer>
         </div>
     );
 };

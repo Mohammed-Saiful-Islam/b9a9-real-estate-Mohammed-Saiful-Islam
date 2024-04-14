@@ -3,6 +3,8 @@ import Navbar from "../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import Header from "../Shared/Header/Header";
+import Footer from "../Shared/Footer/Footer";
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
@@ -34,6 +36,7 @@ const Register = () => {
                     Residential | Register
                 </title>
             </Helmet>
+            <Header></Header>
             <Navbar></Navbar>
             <h2 className="text-3xl text-center my-10">Please Register</h2>
             <form onSubmit={handleRegister} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
@@ -69,6 +72,7 @@ const Register = () => {
                             </div>
                         </form>
                         <p className='text-center mt-4'>Already have an account?<Link className='text-blue-600 font-bold' to="/login">Login</Link></p>
+                        <Footer></Footer>
         </div>
     );
 };
