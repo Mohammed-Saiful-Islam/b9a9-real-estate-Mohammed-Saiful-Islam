@@ -31,7 +31,7 @@ const Home = () => {
                 {/* news container */}
                 <div className="">
                    {
-                    news.map(aNews=><NewsCard key={aNews._id} news={aNews}></NewsCard>)
+                    news.map(aNews=><NewsCard key={aNews.id} news={aNews}></NewsCard>)
                    }
                 </div>
                 {/* <div className="border">
