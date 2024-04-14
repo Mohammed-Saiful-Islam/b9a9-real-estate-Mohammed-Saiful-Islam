@@ -3,9 +3,10 @@ import Header from "../Shared/Header/Header";
 import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
 import Navbar from "../Shared/Navbar/Navbar";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
-import BreakingNews from "./BreakingNews";
+// import BreakingNews from "./BreakingNews";
 import NewsCard from "./NewsCard";
 import { Helmet } from "react-helmet-async";
+import Slider from "./Slider";
 
 
 const Home = () => {
@@ -19,7 +20,8 @@ const Home = () => {
                 </title>
             </Helmet>
             <Header></Header>
-            <BreakingNews></BreakingNews>
+            <Slider></Slider>
+            {/* <BreakingNews></BreakingNews> */}
             <Navbar></Navbar>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div className="border">
