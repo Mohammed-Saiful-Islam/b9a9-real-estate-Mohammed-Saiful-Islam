@@ -10,14 +10,11 @@ const News = () => {
         <div>
             <Header></Header>
             <Navbar></Navbar>
-            <div className="grid md:grid-cols-4">
-                <div className="col-span-3">
-                    <h2 className="text-5xl">News Detail</h2>
-                    <p>{id}</p>
+            <div className="">
+                <div className="">
+                    <h2 className="text-5xl text-center">News Detail</h2>
+                    <p className="text-center">{id}</p>
                     </div>
-                <div>
-                    <RightSideNav></RightSideNav>
-                </div>
             </div>
             <Footer></Footer>
         </div>

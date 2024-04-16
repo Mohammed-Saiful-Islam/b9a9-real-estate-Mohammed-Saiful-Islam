@@ -7,7 +7,7 @@ const Footer = () => {
         <div>
             <footer className="footer footer-center p-10 bg-[green] text-[#c88034]">
   <aside>
-   <img src={logo} alt="" />
+   <img src='https://i.ibb.co/GQcV5YV/logo3-C3-A8-PQR2.jpg' alt="" className='w-96' />
     <p className="font-bold">
       Mallik RRS Co. Ltd. <br/>Providing Residential Real States since 1991
     </p> 
