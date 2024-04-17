@@ -9,9 +9,7 @@ const NewsCard = ({ news }) => {
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
                     {
-                        
                             <p>{description} <Link to={`/news/${id}`} className="text-blue-600 font-bold">Read More...</Link></p>
-                       
                     }
                 </div>
             </div>
