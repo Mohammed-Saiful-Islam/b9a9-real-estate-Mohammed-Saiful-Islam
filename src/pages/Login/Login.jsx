@@ -5,6 +5,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
+import RightSideNav from '../Shared/RightSideNav/RightSideNav';
 
 
 const Login = () => {
@@ -42,7 +43,8 @@ const Login = () => {
             <Header></Header>
             <Navbar></Navbar>
             <h2 className="text-3xl text-center my-10">Please Login</h2>
-            <form onSubmit={handleLogin} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+            <div className='flex'>
+                <div className='w-1/2'><form onSubmit={handleLogin} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -61,7 +63,9 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>
-                        </form>
+                        </form></div>
+                <div><RightSideNav></RightSideNav></div>
+            </div>
                         <p className='text-center mt-4'>Do not have an account?<Link className='text-blue-600 font-bold' to="/register">Register</Link></p>
                         
         <Footer></Footer>
