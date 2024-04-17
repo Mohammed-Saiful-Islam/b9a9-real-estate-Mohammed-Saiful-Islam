@@ -18,7 +18,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/news/:id',
-                element: <PrivateRoute><News></News></PrivateRoute>
+                element: <PrivateRoute><News></News></PrivateRoute>,
+                loader:()=>fetch('/residential_states.json')
             },
             {
                 path: '/login',
