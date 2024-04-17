@@ -24,9 +24,11 @@ const News = () => {
                         <div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 dark:text-gray-50">
                             <h1 className="text-5xl font-bold leading-none sm:text-6xl xl:max-w-3xl dark:text-gray-50">{aNews.estate_title}</h1>
                             <p className="mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl dark:text-gray-50">{aNews.description}</p>
-                            <div className="flex flex-wrap justify-center">
-                                <button type="button" className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-gray-100 dark:text-gray-900">Get started</button>
-                                <button type="button" className="px-8 py-3 m-2 text-lg border rounded dark:border-gray-300 dark:text-gray-50">Learn more</button>
+                            <div className="flex flex-wrap justify-center gap-2">
+                                <h2>price: {aNews.price} USD</h2>
+                                <h2>Area: {aNews.area}</h2>
+                                <h2>Location: {aNews.location}</h2>
+                                <h2>Facilities: {aNews.facilities}</h2>
                             </div>
                         </div>
                     </div>
