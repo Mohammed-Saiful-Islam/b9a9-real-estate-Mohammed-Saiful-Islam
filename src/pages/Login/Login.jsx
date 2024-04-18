@@ -5,7 +5,6 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
-import RightSideNav from '../Shared/RightSideNav/RightSideNav';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 
@@ -51,7 +50,17 @@ const Login = () => {
             })
     }
 
-   
+    const handleGithubSignIn = () => {
+        signInWithPopup(auth, githubProvider)
+        .then( result => {
+            const loggedInUser = result.user;
+            console.log(loggedInUser);
+            setUser(loggedInUser);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    }
 
     return (
         <div>
@@ -92,6 +101,7 @@ const Login = () => {
                         <h2 className="text-3xl">Login With</h2>
 
                         <button className="btn btn-outline w-full" onClick={handleGoogleSignIn}>Google login</button>
+                        <button className="btn btn-outline w-full" onClick={handleGithubSignIn}>Github Login</button>
 
                       
                     </div>
