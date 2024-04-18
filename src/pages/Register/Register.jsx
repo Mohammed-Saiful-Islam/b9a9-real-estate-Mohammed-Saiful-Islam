@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import Header from "../Shared/Header/Header";
 import Footer from "../Shared/Footer/Footer";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleRegister = e =>{
         e.preventDefault();
@@ -62,7 +64,13 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input name='password' type="password" placeholder="password" className="input input-bordered" required />
+                                <div className="relative mb-4">
+                        <input className=" border border-red-950 w-full py-2 px-4" type={showPassword ? "text" : "password"} name="password" placeholder="Password" id="" required />
+                        <span className="absolute top-3 right-2" onClick={() => setShowPassword(!showPassword)}>{
+                            showPassword ?
+                                <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>
+                        }</span>
+                    </div>
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
