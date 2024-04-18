@@ -29,7 +29,7 @@ const Home = () => {
                     <LeftSideNav></LeftSideNav>
                 </div> */}
                 {/* news container */}
-                <div className="">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-2 lg:gap-3 md:place-items-stretch">
                    {
                     news.map(aNews=><NewsCard key={aNews.id} news={aNews}></NewsCard>)
                    }
